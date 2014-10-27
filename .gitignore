@@ -13,5 +13,7 @@ project/boot/
 project/plugins/project/
 
 # Scala-IDE specific
+tadp-tp2-object-funtional.iml
+.idea
 .scala_dependencies
 .worksheet
