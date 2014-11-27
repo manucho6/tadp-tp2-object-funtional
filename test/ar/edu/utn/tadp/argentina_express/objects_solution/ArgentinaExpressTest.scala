@@ -14,7 +14,7 @@ class ArgentinaExpressTest {
   var oficina_destino: Office = _
   var paquete: Package = _
   var paquete_gigante: Package = _
-  var truck : Truck = new Truck
+  var truck : Transport = new Transport(Truck)
 
   @Before
   def initialize() {
@@ -28,13 +28,7 @@ class ArgentinaExpressTest {
   }
 
   @Test
-  def `Realizar envio` = {
-    assertTrue(cliente.sendPackage(oficina_origen, oficina_destino, paquete))
-    assertFalse(cliente.sendPackage(oficina_origen, oficina_destino, paquete_gigante))
-  }
-  
-  @Test
   def `Calcular costo de envio` = {
-    assertEquals(oficina_origen.shippings.head.cost, 1000)
+    assertEquals(truck.travelCost, 50857, 0)
   }
 }

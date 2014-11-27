@@ -8,3 +8,4 @@ class Package (val shipment_type: ShipmentType, val size:Int){
   
   def requiresCooling = { shipment_type == Cooling }
 }
+
